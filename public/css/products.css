@@ -1,0 +1,102 @@
+.products {
+    padding: 40px;
+    text-align: center;
+    background: #f8f8f8;
+}
+
+.products h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 250px;
+    padding: 15px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    text-align: start;
+}
+.card-a{
+    display: block;
+    height: 80%;
+    img{
+        max-height: 90%;
+    }
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: all 0.5s ease-in-out;
+}
+.card img:hover{
+    transform: scale(1.06);
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.price-like {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.price {
+    color: #f39c12;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+.price:hover{
+    transform: scale(1.06);
+}
+.likes i {
+    color: #e74c3c;
+    margin-right: 5px;
+    transition: transform 0.3s;
+}
+
+.likes:hover i {
+    transform: scale(1.2);
+}
+
+/* موبايل */
+@media (max-width: 768px) {
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+h2{
+    position: relative;
+}
+h2::after {
+    right: 46%;
+}
