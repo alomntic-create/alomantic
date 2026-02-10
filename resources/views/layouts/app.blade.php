@@ -47,7 +47,7 @@
 
                         <!-- 🔹 عن الشركة -->
                         <div class="company">
-                            <h4>الشركة</h4>
+                            <h4>الومنتك القابضة</h4>
                             <p>
                               {{$settings_about->content ?? ''}}
                             </p>
@@ -62,7 +62,7 @@
 
                                 <li>
                                     <a href="{{ route('welcome') }}#products">
-                                    <i class="fa-solid fa-angles-left"></i> المنتجات
+                                    <i class="fa-solid fa-angles-left"></i> ما نقدمه
                                     </a>
 
                                 </li>
@@ -115,11 +115,35 @@
                         <div class="contactUs">
                             <h4>تواصل معنا</h4>
                             <ul>
-                                <li><i class="fa-solid fa-envelope"></i> {{$settings_email->content ?? ''}}</li>
-                                <li><i class="fa-solid fa-phone"></i> {{$settings_phone->content ?? ''}}</li>
-                                <li><i class="fa-brands  fa-whatsapp"></i> {{$settings_whats->content?? ''}}</li>
-                                <li><i class="fa-brands fa-instagram"></i> {{$settings_insta->content ??''}}</li>
+                                <li>
+                                    <i class="fa-solid fa-envelope"></i>
+                                    <a href="mailto:{!! $settings_email->content ?? '' !!}">
+                                        {!! $settings_email->content ?? '' !!}
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <i class="fa-solid fa-phone"></i>
+                                    <a href="tel:{!! $settings_phone->content ?? '' !!}">
+                                        {!! $settings_phone->content ?? '' !!}
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                    <a href="https://wa.me/{!! preg_replace('/[^0-9]/', '', $settings_whats->content ?? '') !!}" target="_blank">
+                                        {!! $settings_whats->content ?? '' !!}
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <i class="fa-brands fa-instagram"></i>
+                                    <a href="{!! $settings_insta->content ?? '' !!}" target="_blank">
+                                        {!! $settings_insta->content ?? '' !!}
+                                    </a>
+                                </li>
                             </ul>
+
                         </div>
                     </div>
 
