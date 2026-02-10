@@ -10,8 +10,8 @@
     <meta name="description" content="الومنتك القابضة رائدة في حلول الألومنيوم، الزجاج السيكوريت، الدربزينات، وواجهات الكلادينج. جودة عالية في التنفيذ لأعمال البناء والتشطيبات المعمارية.">
 
     <meta name="keywords" content="الومنتك، الومنتك القابضة، ألومنيوم، شبابيك ألومنيوم، أبواب زجاج، درابزين، كلادينج، واجهات زجاجية، بناء، تشطيب، سيكوريت، مرايا، ألوميتال، الومنتك،الومنيوم  ">
-    <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
-    <link rel="apple-touch-icon" href="{{ asset('images/favicon.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('images/favicon.jpg') }}">
+    <link rel="apple-touch-icon" href="{{ asset('images/favicon.jpg') }}">
     <meta property="og:title" content="الومنتك القابضة - حلول الألومنيوم والزجاج المتكاملة">
     <meta property="og:description" content="ننفذ مشاريع الألومنيوم،الابواب , الكلادينج، والدربزينات بأعلى معايير الجودة. تواصل معنا للتحصل على الجودة وراحة البال.">
     <meta property="og:type" content="website">
