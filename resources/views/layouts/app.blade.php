@@ -133,7 +133,7 @@
                                     <i class="fa-brands fa-whatsapp"></i>
                                     <a href="https://wa.me/{{  strip_tags($settings_whats->content ?? '') }}"
                                        target="_blank">
-                                        {{ strip_tags($settings_whats->content ?? '') }}
+                                      مراسلة . .
                                     </a>
                                 </li>
 
@@ -151,7 +151,7 @@
 
 
                     <div class="footer-bottom">
-                        <p>© 2025 جميع الحقوق محفوظة | شركتك</p>
+                        <p>© 2025 جميع الحقوق محفوظة | الومنتك القابضة </p>
                     </div>
                 </footer>
 
