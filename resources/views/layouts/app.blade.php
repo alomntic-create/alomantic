@@ -49,7 +49,7 @@
                         <div class="company">
                             <h4>الومنتك القابضة</h4>
                             <p>
-                              {{$settings_about->content ?? ''}}
+                              {!!    $settings_about->content ?? ''!!}
                             </p>
                         </div>
                         <!-- 🔹 روابط سريعة -->
