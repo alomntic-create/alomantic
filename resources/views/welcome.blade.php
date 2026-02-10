@@ -6,7 +6,7 @@
 
                 <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="swiper panelSwiper">
                     <div class="parallax-bg" style="
-    background-image: url('{{ asset('images/panel1.png') }}');
+    background-image: url('{{ asset('images/bnr3.png') }}');
              " data-swiper-parallax="-23%"></div>
 
                     <div class="swiper-wrapper">
