@@ -117,34 +117,36 @@
                             <ul>
                                 <li>
                                     <i class="fa-solid fa-envelope"></i>
-                                    <a href="mailto:{!! $settings_email->content ?? '' !!}">
-                                        {!! $settings_email->content ?? '' !!}
+                                    <a href="mailto:{{ strip_tags($settings_email->content ?? '') }}">
+                                        {{ strip_tags($settings_email->content ?? '') }}
                                     </a>
                                 </li>
 
                                 <li>
                                     <i class="fa-solid fa-phone"></i>
-                                    <a href="tel:{!! $settings_phone->content ?? '' !!}">
-                                        {!! $settings_phone->content ?? '' !!}
+                                    <a href="tel:{{ strip_tags($settings_phone->content ?? '') }}">
+                                        {{ strip_tags($settings_phone->content ?? '') }}
                                     </a>
                                 </li>
 
                                 <li>
                                     <i class="fa-brands fa-whatsapp"></i>
-                                    <a href="https://wa.me/{!! $settings_whats->content ?? '' !!}" target="_blank">
-                                        {!! $settings_whats->content ?? '' !!}
+                                    <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', strip_tags($settings_whats->content ?? '')) }}"
+                                       target="_blank">
+                                        {{ strip_tags($settings_whats->content ?? '') }}
                                     </a>
                                 </li>
 
                                 <li>
                                     <i class="fa-brands fa-instagram"></i>
-                                    <a href="{!! $settings_insta->content ?? '' !!}" target="_blank">
-                                        {!! $settings_insta->content ?? '' !!}
+                                    <a href="{{ strip_tags($settings_insta->content ?? '') }}"
+                                       target="_blank">
+                                        {{ strip_tags($settings_insta->content ?? '') }}
                                     </a>
                                 </li>
                             </ul>
-
                         </div>
+
                     </div>
 
 
