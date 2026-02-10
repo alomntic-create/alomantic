@@ -675,72 +675,46 @@ footer.footer {
     opacity: 1;
     transform: translateY(0);
 }
-@media only screen and (max-width: 600px) {
-
-.panel-swiper {
-.parallax-bg {
-background-size: auto;
-} }
-.we
-{ .img,.description {
-max-width: 100%;
-} }
-
-.location{
-.image{
-display: block;
-width: 100%;
-
-
-}
-.describe{
-display: block;
-width: 100%;
-}
-}
-.sections{
-.content{
-.card{
-    width: 47%;
-    height: 200px;
-}
-}
-}
-
-.branches{
-.swiper-slide {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-}
-}
-
-
-    .products-home {
-        height: 500px;
-        overflow: auto;
-        justify-content: space-around;
-        .card {
-            width: 45%;
-            height: 300px;
-            margin-top: 10px;
-        }
-    }
-}
-
 .clients-says{
 
 
-        background: #5bc6e00a;
-        border-radius: 10px;
-        min-height: 250px;
-        align-items: center;
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
+    background: #5bc6e00a;
+    border-radius: 10px;
+    min-height: 250px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 
+    .nav-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgb(245 253 254);
+        color: #0b1020;
+        border: 1px solid #0f3b41;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 20px;
+        transition: all 0.3s ease;
+        z-index: 10;
+    }
+
+    .nav-btn:hover {
+        background: rgba(0,0,0,0.7);
+        transform: translateY(-50%) scale(1.1);
+    }
+
+    .nav-btn.prev {
+        right: -50px; /* لو الموقع عربي */
+    }
+
+    .nav-btn.next {
+        left: -50px;
+    }
     .testimonials {
         max-width: 600px;
         margin: 0 auto;
@@ -777,5 +751,118 @@ width: 100%;
         font-size: 22px;
     }
 }
+@media only screen and (max-width: 600px) {
+
+.panel-swiper {
+.parallax-bg {
+background-size: auto;
+} }
+.we
+{ .img,.description {
+max-width: 100%;
+} }
+
+.location{
+.image{
+display: block;
+width: 100%;
+
+
+}
+.describe{
+display: block;
+width: 100%;
+}
+}
+.sections{
+.content{
+.card{
+    width: 43%;
+    height: 190px;
+    margin: 10px;
+}
+}
+}
+
+.branches{
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+}
+
+
+    .products-home {
+        height: 500px;
+        overflow: auto;
+        justify-content: space-around;
+        .card {
+            width: 45%;
+            height: 300px;
+            margin-top: 10px;
+        }
+    }
+
+    .clients-says{
+
+
+
+
+        .nav-btn:hover {
+            background: rgba(0,0,0,0.7);
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        .nav-btn.prev {
+            right: 45%;
+            top: 100%;
+        }
+
+        .nav-btn.next {
+            left: 45%;
+            top: 23%;
+        }
+        .testimonials {
+            max-width: 600px;
+            margin: 0 auto;
+            position: relative;
+            min-height: 120px; /* علشان ما ينهار السكشن وقت الاختفاء */
+            overflow: hidden;
+        }
+
+        .t-item {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: all 1s ease;
+            padding: 15px;
+            border-radius: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+        }
+
+        .t-item.active {
+            opacity: 1;
+            transform: translateX(0);
+            position: relative;
+        }
+
+        .sender{
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .content{
+            color: #0000009c;
+            font-size: 22px;
+        }
+    }
+
+}
+
+
 
 

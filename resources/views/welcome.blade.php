@@ -219,39 +219,39 @@
         </div>
     </div>
 
-        <div class="holder">
+{{--            <div class="holder">--}}
 
-            <h2>الاكثر اعجابا
-                <i class="far fa-heart"></i>
-            </h2>
-            <div class="spatial">
+{{--                <h2>الاكثر اعجابا--}}
+{{--                    <i class="far fa-heart"></i>--}}
+{{--                </h2>--}}
+{{--                <div class="spatial">--}}
 
-                <div class="heart">
+{{--                    <div class="heart">--}}
 
-                </div>
-                <div class="swiper spatialSwiper">
-                    <div class="swiper-wrapper">
-                        @foreach($likes as $like)
-                            <div class="swiper-slide">
-                                <a href="{{route('product.show',[$like->Product->id])}}">
+{{--                    </div>--}}
+{{--                    <div class="swiper spatialSwiper">--}}
+{{--                        <div class="swiper-wrapper">--}}
+{{--                            @foreach($likes as $like)--}}
+{{--                                <div class="swiper-slide">--}}
+{{--                                    <a href="{{route('product.show',[$like->Product->id])}}">--}}
 
-                                    @if($like->Product->media->where('media_type',10)->first())
-                                        <img src="{{ asset('storage/' . $like->Product->media->where('media_type',10)->first()->url) }}" alt="{{$product->name}}">
-                                    @elseif($like->Product->media->first())
-                                        <img src="{{ asset('storage/' . $like->Product->media->where('media_type',0)->first()->url) }}" alt="{{$product->name}}">
-                                    @else
-                                        <img src="{{ asset('images/default.png') }}" alt="{{$like->Product->name}}">
-                                    @endif
+{{--                                        @if($like->Product->media->where('media_type',10)->first())--}}
+{{--                                            <img src="{{ asset('storage/' . $like->Product->media->where('media_type',10)->first()->url) }}" alt="{{$product->name}}">--}}
+{{--                                        @elseif($like->Product->media->first())--}}
+{{--                                            <img src="{{ asset('storage/' . $like->Product->media->where('media_type',0)->first()->url) }}" alt="{{$product->name}}">--}}
+{{--                                        @else--}}
+{{--                                            <img src="{{ asset('images/default.png') }}" alt="{{$like->Product->name}}">--}}
+{{--                                        @endif--}}
 
-                                </a>
-                            </div>
-                        @endforeach
+{{--                                    </a>--}}
+{{--                                </div>--}}
+{{--                            @endforeach--}}
 
 
-                    </div>
-                </div>
-            </div>
-        </div>
+{{--                        </div>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
         <div class="holder">
             <h2>شركاء النجاح </h2>
             <div class="partners-banner">
@@ -271,55 +271,56 @@
  <div class="holder">
      <h2>ماذا يقول عملاءنا </h2>
      <div class="clients-says">
+         <button class="nav-btn prev">&#10094;</button>
+
          <section class="testimonials" id="testimonials">
              @foreach($messages as $message)
-                 <div class="t-item  {{$loop->first ? 'active' : '' }}">
-
+                 <div class="t-item {{$loop->first ? 'active' : ''}}">
                      <div class="content">
                          {{$message->content}}
                      </div>
-
-              <div class="sender"> {{$message->sender}}  </div>
+                     <div class="sender">{{$message->sender}}</div>
                  </div>
-
              @endforeach
-
          </section>
+
+         <button class="nav-btn next">&#10095;</button>
      </div>
 
+
  </div>
-        <div class="holder">
-            <h2>الفروع  <i class="fas fa-map-marked-alt"></i></h2>
-            <div class="branches">
-                <div class="swiper brSwiper">
-                    <div class="swiper-wrapper">
-                        @foreach($branches as $branch)
-                            <div class="swiper-slide">
-                                <div class="image branch-image">
-                                    @if(!$branch->media->isEmpty())
-                                        <img src="{{ asset('storage/'.$branch->media->first()->url) }}" alt="">
-                                    @else
-                                        <img src="{{ asset('images/default_branch.png') }}" alt="">
-                                    @endif
-                                </div>
-                                <div class="content branch-content">
-                                    <p>{{ $branch->phone }} <i class="fas fa-phone"></i></p>
-                                    <p>{{ $branch->location }} <i class="fas fa-map-marker-alt"></i></p>
-                                    <a href="https://www.google.com/maps/search/?api=1&query={{ urlencode(($branch->map_location)) }}"
-                                       target="_blank" class="branch-link">
-                                        <i class="fas fa-directions"></i> اذهب إلى الموقع
-                                    </a>
+{{--        <div class="holder">--}}
+{{--            <h2>الفروع  <i class="fas fa-map-marked-alt"></i></h2>--}}
+{{--            <div class="branches">--}}
+{{--                <div class="swiper brSwiper">--}}
+{{--                    <div class="swiper-wrapper">--}}
+{{--                        @foreach($branches as $branch)--}}
+{{--                            <div class="swiper-slide">--}}
+{{--                                <div class="image branch-image">--}}
+{{--                                    @if(!$branch->media->isEmpty())--}}
+{{--                                        <img src="{{ asset('storage/'.$branch->media->first()->url) }}" alt="">--}}
+{{--                                    @else--}}
+{{--                                        <img src="{{ asset('images/default_branch.png') }}" alt="">--}}
+{{--                                    @endif--}}
+{{--                                </div>--}}
+{{--                                <div class="content branch-content">--}}
+{{--                                    <p>{{ $branch->phone }} <i class="fas fa-phone"></i></p>--}}
+{{--                                    <p>{{ $branch->location }} <i class="fas fa-map-marker-alt"></i></p>--}}
+{{--                                    <a href="https://www.google.com/maps/search/?api=1&query={{ urlencode(($branch->map_location)) }}"--}}
+{{--                                       target="_blank" class="branch-link">--}}
+{{--                                        <i class="fas fa-directions"></i> اذهب إلى الموقع--}}
+{{--                                    </a>--}}
 
-                                </div>
-                            </div>
-                        @endforeach
-                    </div>
-                    <div class="swiper-pagination"></div>
-                </div>
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        @endforeach--}}
+{{--                    </div>--}}
+{{--                    <div class="swiper-pagination"></div>--}}
+{{--                </div>--}}
 
-            </div>
+{{--            </div>--}}
 
-        </div>
+{{--        </div>--}}
 
 
 </x-app-layout>
