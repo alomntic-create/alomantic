@@ -9,11 +9,11 @@
 
     <meta name="description" content="الومنتك القابضة رائدة في حلول الألومنيوم، الزجاج السيكوريت، الدربزينات، وواجهات الكلادينج. جودة عالية في التنفيذ لأعمال البناء والتشطيبات المعمارية.">
 
-    <meta name="keywords" content="الومنتك، الومنتك القابضة، ألومنيوم، شبابيك ألومنيوم، أبواب زجاج، درابزين، كلادينج، واجهات زجاجية، بناء، تشطيب، سيكوريت، مرايا، ألوميتال، الومنتك،الومنيوم  ">
-    <link rel="icon" type="image/png" href="{{ asset('images/favicon.jpg') }}">
-    <link rel="apple-touch-icon" href="{{ asset('images/favicon.jpg') }}">
+    <meta name="keywords" content="الومنتك، الومنتك القابضة، ألومنيوم، شبابيك ألومنيوم، أبواب زجاج، درابزين، كلادينج، واجهات زجاجية، بناء، تشطيب، سيكوريت، مرايا، ألوميتال ،زجاج">
+    <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('images/favicon.png') }}">
     <meta property="og:title" content="الومنتك القابضة - حلول الألومنيوم والزجاج المتكاملة">
-    <meta property="og:description" content="ننفذ مشاريع الألومنيوم،الابواب , الكلادينج، والدربزينات بأعلى معايير الجودة. تواصل معنا للتحصل على الجودة وراحة البال.">
+    <meta property="og:description" content="ننفذ مشاريع الألومنيوم،الابواب  الكلادينج، والدربزينات بأعلى معايير الجودة. تواصل معنا لتجد الجودة وراحة البال.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:image" content="{{ asset('images/logo-share.jpg') }}"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
