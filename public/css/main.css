@@ -310,6 +310,9 @@ transition: all 1s ease-in-out;
                 height: 90%;
                 display: flex;
                 justify-self: center;
+                img{
+                    margin: 0 auto;
+                }
 
             }
             .footer{
