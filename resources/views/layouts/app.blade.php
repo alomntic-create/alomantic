@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="csrf-token" content="{{ csrf_token() }}">
-        <title>{{ config('app.name', 'Laravel') }}</title>
-        <!-- Fonts -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.css"/>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-{{--        <link href= {{secure_asset('css/main.css')}} rel="stylesheet" />--}}
-        <link href= {{ asset('css/main.css')}} rel="stylesheet" />
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-    </head>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>الومنتك القابضة | متخصصون في الألومنيوم، الزجاج، والكلادينج</title>
+
+    <meta name="description" content="الومنتك القابضة رائدة في حلول الألومنيوم، الزجاج السيكوريت، الدربزينات، وواجهات الكلادينج. جودة عالية في التنفيذ لأعمال البناء والتشطيبات المعمارية.">
+
+    <meta name="keywords" content="الومنتك، الومنتك القابضة، ألومنيوم، شبابيك ألومنيوم، أبواب زجاج، درابزين، كلادينج، واجهات زجاجية، بناء، تشطيب، سيكوريت، مرايا، ألوميتال">
+    <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
+    <link rel="apple-touch-icon" href="{{ asset('images/favicon.png') }}">
+    <meta property="og:title" content="الومنتك القابضة - حلول الألومنيوم والزجاج المتكاملة">
+    <meta property="og:description" content="ننفذ مشاريع الألومنيوم، الكلادينج، والدربزينات بأعلى معايير الجودة. تواصل معنا لمشاريع البناء والتشطيب.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ url()->current() }}">
+    <meta property="og:image" content="{{ asset('images/logo-share.jpg') }}"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum/build/pannellum.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link href="{{ asset('css/main.css') }}" rel="stylesheet" />
+
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
     @php
         $settings_about=\App\Models\Info::where('type',4)->first();
         $settings_whats=\App\Models\Info::where('type',7)->first();
