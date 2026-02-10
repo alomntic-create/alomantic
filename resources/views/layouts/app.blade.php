@@ -131,7 +131,7 @@
 
                                 <li>
                                     <i class="fa-brands fa-whatsapp"></i>
-                                    <a href="https://wa.me/{!! preg_replace('/[^0-9]/', '', $settings_whats->content ?? '') !!}" target="_blank">
+                                    <a href="https://wa.me/{!! $settings_whats->content ?? '' !!}" target="_blank">
                                         {!! $settings_whats->content ?? '' !!}
                                     </a>
                                 </li>
